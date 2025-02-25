@@ -1,0 +1,77 @@
+POST http://localhost:5000/api/professionals
+Content-Type: application/json
+
+{
+    "name": "Tshepo Magagula", 
+    "email": "tshepomagagulatp11@gmail.com", 
+    "phone": "0722328618", 
+    "skills": "java, html, css, software development", 
+    "experience": 3
+}
+
+###
+GET http://localhost:5000/api/professionals
+
+###
+POST http://localhost:5000/api/register
+Content-Type: application/json
+
+{
+    "name": "Tshepo Magagula", 
+    "email": "tshepomagagulatp11@gmail.com",
+    "password": "Cr7Tp11_M", 
+    "role": "professional"
+}
+
+###
+POST http://localhost:5000/api/login
+Content-Type: application/json
+
+{
+    "email": "tshepomagagulatp11@gmail.com",
+    "password": "Cr7Tp11_M"
+}
+
+###
+POST http://localhost:5000/api/sme/onboard
+Content-Type: application/json
+
+{
+
+}
+
+###
+POST http://localhost:5000/api/professionals
+Content-Type: application/json
+
+{
+
+}
+
+###
+POST http://localhost:5000/api/post-job
+Content-Type: application/json
+
+{
+    "title": "Mechanical engineer", 
+    "description": "we are looking for an experience engineer", 
+    "location": "Johannesburg", 
+    "requirements": "knowledge of combustion engine", 
+    "salary": 30000
+}
+
+###
+POST http://localhost:5000/api/search-professionals
+Content-Type: application/json
+
+{
+
+}
+
+###
+POST http://localhost:5000/api/jobs/search
+Content-Type: application/json
+
+{
+    "searchQuery": "Software Engineer"
+}
