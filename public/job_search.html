@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Search</title>
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="form-container">
+            <h1>Job Search</h1>
+    
+            <div x-data="jobSearch()">
+                <h2>Find Your Next Opportunity</h2>
+                
+                <input type="text" x-model="searchQuery" placeholder="Search jobs by title or keyword" />
+                <button @click="fetchJobs()">Search</button>
+                
+                <div x-text="message" style="color: red; margin-top: 10px;"></div>
+                
+                <ul>
+                    <template x-for="job in jobs" :key="job.id">
+                        <li>
+                            <h3 x-text="job.title"></h3>
+                            <p><strong>Location:</strong> <span x-text="job.location"></span></p>
+                            <p><strong>Description:</strong> <span x-text="job.description"></span></p>
+                            <p><strong>Requirements:</strong> <span x-text="job.requirements"></span></p>
+                        </li>
+                    </template>
+                </ul>
+            </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
